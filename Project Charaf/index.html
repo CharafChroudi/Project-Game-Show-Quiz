@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Who wants to be a millionaire</title>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" href="styling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script  src="jquery-3.5.0.min.js"></script>
+</head>
+<body>
+	<h1 id="header1">Welcome to: Who wants to be a millionaire ! </h1>
+	<label id= "enterName" >Enter your name:</label>
+	<br>
+	<textarea id="userName" rows="1" cols="20"></textarea>
+			<br>
+		<input id="btn1" type="submit" form="nameform" value="Play">
+	<div id="container" style="display: none">
+    <div style="visibility:hidden">
+	   	<audio autoplay>
+    		<source src="commerical-break.mp3">
+		</audio> 
+	</div>
+    <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="choices">       
+    <div style="visibility:hidden">
+            <audio autoplay loop>
+                <source src="main-Theme.mp3">
+            </audio> 
+    </div>
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <div id="progress"></div>
+        </div>
+    </div>
+    	<div id="scoreContainer" style="display: none"></div>
+    	<button id="btn2"style="display: none"onClick="window.location.reload();">Play again ?</button>
+	<script src="coding.js"></script>
+</body>
+</html>
